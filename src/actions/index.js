@@ -13,7 +13,7 @@ export function addNote(noteTitle){
 
 export function fetchNotes(){
   const notes = notesAdapter.fetchNotes()
-  
+
   return {
     type: 'FETCH_NOTES',
     payload: notes
@@ -28,12 +28,7 @@ export function updateCurrentNote(noteId){
 }
 
 export function updateNote(noteParams){
-
   notesAdapter.updateNote(noteParams)
-
-
-
-
   return {
     type: 'UPDATE_NOTE',
     payload: {

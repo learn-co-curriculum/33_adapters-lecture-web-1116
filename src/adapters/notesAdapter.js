@@ -6,14 +6,14 @@ axios.defaults.headers.common['AUTHORIZATION'] = sessionStorage.getItem('jwt')
 import { browserHistory } from 'react-router'
 import _ from 'lodash'
 
-export default notesAdapter = {
+export default {
 
   fetchNotes: function(){
     return axios.get('/notes').then(response => response.data)
   },
 
   loginUser: function(loginParams){
-    
+
     return axios.post('/sessions', loginParams)
       .then((res) => {
         sessionStorage.setItem('jwt', res.data.jwt)

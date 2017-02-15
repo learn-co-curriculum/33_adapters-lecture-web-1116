@@ -49,7 +49,7 @@ function mapDispatchToProps(dispatch){
       dispatch(action)
     },
     updateCurrentNote: function(id){
-      let action = updateNote(id)
+      let action = updateCurrentNote(id)
       dispatch(action)
     }
   }
